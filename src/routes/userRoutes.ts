@@ -34,6 +34,7 @@ userRouter.get("/:id", async (req, res) => {
   res.json(foundUser);
 });
 
+//update user
 userRouter.put("/:id", async (req, res) => {
   const idToUpdate = req.params.id;
   const { name, age } = req.body;
@@ -53,6 +54,7 @@ userRouter.put("/:id", async (req, res) => {
   res.json(updatedUser);
 });
 
+//delete single user
 userRouter.delete("/:id", async (req, res) => {
   const { id: idToDelete } = req.params;
 
